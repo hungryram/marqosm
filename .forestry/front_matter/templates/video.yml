@@ -1,0 +1,27 @@
+---
+label: Video
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: video
+  type: file
+  config:
+    maxSize: 64
+  label: Video
+- name: cover_photo
+  type: file
+  config:
+    maxSize: 64
+  label: Cover Photo
+- name: seo
+  type: include
+  config: {}
+  template: seo
+  label: SEO
+pages:
+- content/videos/Fights/michael-chandler.md
+- content/videos/test.md

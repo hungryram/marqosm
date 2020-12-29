@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container-tight">
+        <div class="columns is-multiline is-variable is-8">
+            {{ range where $.Site.RegularPages "Section" "videos" }}
+            <div class="column is-6 has-text-centered">
+                <div class="video-page">
+                    <a href="{{ .Permalink }}">
+                        <h4 class="title is-5 has-text-white">{{ .Title }}</h4>
+                        <img src="{{ .Params.cover_photo }}" alt="" style="height:700px!important;width:100%;object-fit:cover">
+                    </a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

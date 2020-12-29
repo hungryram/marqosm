@@ -1,0 +1,90 @@
+
+<div class="hero-head"{{ if not $.IsHome }}style="border-bottom: 1px solid rgb(213 213 213 / 20%);"{{ end }}>
+    <div class="container pt-4 is-fluid">
+        <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="{{ .Site.BaseURL }}">
+                <img src="/uploads/newlogo.png" alt="">
+              </a>
+          
+              <a onclick="openNav()" class="navbar-burger burger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-end">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                {{ if .HasChildren }}
+                    <div class="navbar-item has-dropdown is-hoverable main-drop">
+                        <a class="pr-0 navbar-link" href="javascript:;">
+                            {{ .Name }}
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 icon-tabler icon-tabler-chevron-down" width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                              <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </a>
+                        <!-- First Level Dropdown -->
+                            <div class="navbar-dropdown">
+                                {{ range .Children }}
+                                    
+                                    <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL | absURL }}{{ end }}">
+                                    {{ .Name }}
+                                    </a>
+                                
+                                {{ end }}
+                          </div>
+                          <!-- End first level Dropdown -->
+                    </div>
+                    {{ else }} <!-- Else No Drop Down-->
+                    <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
+                {{ end }}
+                {{ end }} <!-- End range menu -->
+
+                    <a href="https://www.instagram.com/marqos_maldonado/" target="_blank" class="navbar-item">
+                        <strong>Ig</strong>
+                    </a>
+                    <a href="https://www.facebook.com/Top-Marq-Media-106387677803618" target="_blank" class="navbar-item">
+                        <strong>Fb</strong>
+                    </a>
+              </div>
+            </div>
+          </nav>
+    </div>
+</div>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <nav class="navbar is-transparent">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+            <div class="navbar-item">
+                <a class="pr-0 navbar-link" href="javascript:;">
+                    {{ .Name }}
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 icon-tabler icon-tabler-chevron-down" width="18" height="18" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </a>
+                <!-- First Level Dropdown -->
+                    <div class="navbar-dropdown">
+                        {{ range .Children }}
+                            
+                            <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL | absURL }}{{ end }}">
+                            {{ .Name }}
+                            </a>
+                        
+                        {{ end }}
+                  </div>
+                  <!-- End first level Dropdown -->
+            </div>
+            {{ else }} <!-- Else No Drop Down-->
+            <a href="{{ .URL }}" class="navbar-item">{{ .Name }}</a>
+        {{ end }}
+        {{ end }} <!-- End range menu -->
+        </nav>
+  </div>

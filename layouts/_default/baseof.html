@@ -1,0 +1,19 @@
+{{ partial "global/head" . }}
+<section class="hero is-medium" style="background:#000">
+
+    {{ partial "global/navbar" . }}
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-2 has-text-white is-uppercase">
+          {{ .Title }}
+        </h1>
+      </div>
+    </div>
+
+  </section>
+{{ block "main" . }}
+
+{{ end }}
+{{ partial "global/footer" . }}

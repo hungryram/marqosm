@@ -1,0 +1,119 @@
+{{ $footer := .Site.Data.profile }}
+{{ $footerSocial := .Site.Data.profile.social_media }}
+<footer class="footer pb-0">
+    <div class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column has-text-left">
+                    <h1 class="subtitle is-1 has-text-white has-text-weight-bold">Get in <span class="has-text-weight-feather">Touch</span></h1>
+                    <div class="line"></div>
+                    <div class="mt-6 pt-6">
+                        <p><strong class="has-text-white">Email</strong><br><a href="">topmarqmedia@gmail.com</a></p>
+                        <p class="mt-6"><strong class="has-text-white">Phone</strong><br><a href="">916-281-8917</a></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <form name="Contact Form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+                        <input name="bot-field" type="hidden"/>
+                        <input name="Subject" type="hidden" value="Website Contact Form"/>
+                        <div class="field is-horizontal">
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded">
+                                        <input class="input" type="text" placeholder="Name" name="name">
+                                      </p>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                      <input class="input" type="text" placeholder="Phone" name="phone">
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+              
+                        <div class="field">
+                          <div class="control">
+                            <input class="input" type="email" placeholder="Email" name="email address">
+                          </div>
+                        </div>
+                        <div class="field">
+                          <div class="control">
+                            <textarea class="textarea" placeholder="Your Message" name="message"></textarea>
+                          </div>
+                        </div>
+        
+                        <div class="control">
+                          <button class="primary-btn" style="width:100%;">Submit</button>
+                        </div>
+                        <div class="field mt-5">
+                          <div class="control content">
+                            <label class="checkbox">
+                              <input type="checkbox" required>
+                              <span class="is-size-7">By submitting this form you confirm you have read and agreed to our <a href="/legal/terms-and-conditions">Terms and Conditions</a> and <a href="/legal/privacy-policy">Privacy Policy.</a> You consent to having this website store the submitted information so we can respond to the inquiry. Don't worry, you can request to have your information removed anytime.</span>
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+            </div>
+            <div class="level pt-6 copy">
+                <div class="level-left">
+                    <div class="level-item">
+                        <div>
+                            <p class="is-size-7 has-text-centered-mobile">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}  &middot; <a href="https://hungryram.com" target="_blank" class="is-size-7">Website Developed by Hungry Ram</a></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item has-text-centered-mobile">
+                        <div>
+                            <ul>
+                                {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
+                                <li class="is-inline"><a href="{{ .Permalink }}" class="is-size-7 mx-2 has-text-black">{{ .Title }}</a></li>
+                                {{ end }}
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{.Site.BaseURL}}/js/main.js"></script>
+<script src="{{.Site.BaseURL}}/js/lax.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+<script src="{{ "js/search.js" | absURL }}"></script>
+<script async src="https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"></script>
+<div id="snipcart" data-config-modal-style="side" data-api-key="OGFhMjIxMDAtMWIxZS00ODkyLWEyMDUtZmY3Nzg1ZTk4OTM4NjM3NDQxMDk3NDgzNDMxMTYx" hidden></div>
+<script>
+    window.onload = function() {
+      lax.setup() // init
+    
+      const updateLax = () => {
+        lax.update(window.scrollY)
+        window.requestAnimationFrame(updateLax)
+      }
+    
+      window.requestAnimationFrame(updateLax)
+
+      lax.setup({
+        breakpoints: { small: 0, large: 992 }
+    })
+    }
+  </script>
+  <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+  </script>
+</body>
+</html>

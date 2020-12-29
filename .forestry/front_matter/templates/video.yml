@@ -23,4 +23,5 @@ fields:
   template: seo
   label: SEO
 pages:
+- content/videos/Dance/red-desert.md
 - content/videos/fights/michael-chandler.md

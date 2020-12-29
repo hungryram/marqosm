@@ -22,3 +22,5 @@ fields:
   config: {}
   template: seo
   label: SEO
+pages:
+- content/videos/fights/michael-chandler.md

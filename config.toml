@@ -1,2 +1,3 @@
 baseURL = "https://marqos.netlify.app/"
 languageCode = "en-us"
+[[menu.main]]

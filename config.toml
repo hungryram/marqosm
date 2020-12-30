@@ -4,3 +4,5 @@ languageCode = "en-us"
 name = "Home"
 url = "/"
 weight = 1
+[build.environment]
+HUGO_VERSION = "0.67.0"

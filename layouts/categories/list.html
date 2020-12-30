@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="columns is-multiline is-variable videos is-8">
-            {{ range where .Site.Pages "Type" "videos" }}
+            {{ range .RegularPages }}
             <a href="{{ .Permalink }}">
             <div class="column is-6 mt-6">
                 <div class="video-page">

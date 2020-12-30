@@ -1,4 +1,27 @@
 {{ define "main" }}
+{{ if eq .Section "videos" }}
+<div class="section">
+    <div class="container">
+        <div class="columns is-multiline is-variable videos is-8">
+            {{ range .Pages }}
+            <a href="{{ .Permalink }}">
+            <div class="column is-6 mt-6">
+                <div class="video-page">
+                        <div style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,8)),url({{ .Params.cover_photo }}) no-repeat center;background-size:cover;height: 400px">
+                            <div class="video-text">
+                                <h4 class="title is-5 mb-3 video-title has-text-white has-text-weight-normal">{{ .Title }}</h4>
+                                <a href="{{ .Permalink }}">— Watch Video</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </a>
+
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ else }}
 <div class="section">
     <div class="container">
         <div class="columns">
@@ -8,4 +31,5 @@
         </div>
     </div>
 </div>
+{{ end }}
 {{ end }}

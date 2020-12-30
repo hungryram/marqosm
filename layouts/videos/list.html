@@ -2,7 +2,7 @@
 <div class="section">
     <div class="container">
         <div class="columns is-multiline is-variable videos is-8">
-            {{ range where $.Site.RegularPages "Section" "videos" }}
+            {{ range .RegularPages }}
             <a href="{{ .Permalink }}">
             <div class="column is-6 mt-6">
                 <div class="video-page">

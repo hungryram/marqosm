@@ -299,3 +299,39 @@ footer.footer div.line:before {
 footer.footer a {
     color: #6e6e6e;
 }
+
+/* MASONRY */
+
+/* ---- grid ---- */
+
+.grid {
+    /* center */
+    margin: 0 auto;
+  }
+  
+  /* clearfix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- grid-item ---- */
+  
+  .grid-item {
+    width: 500px;
+    height: 500px;
+    margin-top: 40px;
+  }
+
+  .grid-item img {
+      width: 100%;
+      height: inherit;
+      object-fit: cover;
+  }
+  
+.grid-item {
+    max-width: 100%;
+}
+
+  .grid-item--height2 { height: 250px; }  

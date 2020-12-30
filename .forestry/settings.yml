@@ -4,13 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: directory
+- type: document
   path: content/photography/_index.md
   label: Photography
-  create: documents
   match: "**/*"
-  templates:
-  - photos
 - type: directory
   path: content/videos
   label: Videos

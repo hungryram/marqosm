@@ -9,6 +9,8 @@ sections:
   label: Photography
   create: documents
   match: "**/*"
+  templates:
+  - photos
 - type: directory
   path: content/videos
   label: Videos

@@ -1,4 +1,5 @@
 +++
+categories = ["UFC"]
 cover_photo = "https://hungryram.s3-us-west-1.amazonaws.com/marqos-maldonado/topmarqmedia/michael.JPG"
 meta_description = ""
 title = "Michael Chandler"

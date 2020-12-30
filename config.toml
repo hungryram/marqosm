@@ -1,2 +1,6 @@
 baseURL = "https://marqos.netlify.app/"
 languageCode = "en-us"
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1

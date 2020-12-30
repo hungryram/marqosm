@@ -1,6 +1,6 @@
 +++
 title = "Contact"
 [menu.main]
-weight = 1
+weight = 3
 
 +++

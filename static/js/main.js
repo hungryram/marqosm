@@ -7,7 +7,7 @@ ScrollReveal().reveal('.video-page', {
 });
 
 ScrollReveal().reveal('.grid-item img', {
-    delay: '300',
+    delay: '200',
     origin: 'bottom',
     distance: '50px',
     easing: 'ease-in',

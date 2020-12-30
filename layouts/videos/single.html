@@ -1,8 +1,9 @@
 {{ define "main" }}
 <video controls autoplay>
-    <source src="{{ .Params.video }}" type="video/mp4">
+    <source src="{{ .Params.video }}" type="video/mp4" style="height:100vh">
     Your browser does not support the video tag.
   </video>
+{{ if .Content }}
 <div class="section">
     <div class="container">
         <div class="columns">
@@ -12,4 +13,5 @@
         </div>
     </div>
 </div>
+{{ end }}
 {{ end }}

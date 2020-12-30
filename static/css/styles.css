@@ -8,6 +8,16 @@ body {
 
 /* TYPOGRAPHY */
 
+body a {
+    transition: .3s;
+    color: #626262;
+}
+
+a:hover {
+    color: #b5b5b5;
+    transition: .3s;
+}
+
 h1.title,
 h2.title,
 h3.title,
@@ -244,31 +254,6 @@ div.contact-page h4.title.is-5 {
 
 /* VIDEOS */
 
-img.play-icon {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 0;
-    top: 40%;
-    display: flex;
-    align-items: center;
-}
-
-.video-page {
-    position: relative;
-}
-
-.video-page:nth-child(odd) {
-    margin-top: 40px!important;
-}
-
-.video-page h4.title {
-    position: absolute;
-    left: -50px;
-    top: 50px;
-    font-size: 2rem;
-}
 
 @media screen and (min-width: 1408px) {
 .container-tight {
@@ -277,7 +262,11 @@ img.play-icon {
 }
 }
 
-
+.video-text {
+    position: absolute;
+    bottom: 0;
+    padding: 50px;
+}
 /* FOOTER */
 
 footer.footer {

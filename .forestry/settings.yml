@@ -7,7 +7,6 @@ sections:
 - type: document
   path: content/photography/_index.md
   label: Photography
-  match: "**/*"
 - type: directory
   path: content/videos
   label: Videos

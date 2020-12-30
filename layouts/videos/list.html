@@ -1,6 +1,19 @@
 {{ define "main" }}
 <div class="section">
     <div class="container">
+        <div class="columns">
+            <div class="column">
+                <ul class="sidebar-category">
+                    {{ range $videos, $taxonomy := $.Site.Taxonomies.videos }}
+                  <li class="is-inline mr-6">
+                    <a href="/videos{{ $videos | urlize | relURL }}" class="is-size-4">{{ $videos | humanize }}</a>
+                  </li>
+                  {{else}}
+                  <p>No blog categories just yet</p>
+                  {{ end }}
+                </ul>
+            </div>
+        </div>
         <div class="columns is-multiline is-variable videos is-8">
             {{ range .RegularPages }}
             <a href="{{ .Permalink }}">

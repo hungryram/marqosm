@@ -1,7 +1,7 @@
 ScrollReveal().reveal('.video-page', {
-    delay: '400',
+    delay: '300',
     origin: 'bottom',
-    distance: '200px',
+    distance: '50px',
     easing: 'ease-in',
     duration: 600
 

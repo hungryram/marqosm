@@ -17,10 +17,10 @@ fields:
   config:
     maxSize: 64
   label: Cover Photo
-- name: videos
+- name: categories
   type: tag_list
   default: []
-  label: Videos
+  label: Categories
   description: Categorize the videos
 - name: seo
   type: include
